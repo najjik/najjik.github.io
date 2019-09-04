@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="libs/jquery.mmenu.all/jquery.mmenu.all.css">
+    <link rel="stylesheet" type="text/css" href="libs/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="libs/direction/css/noJS.css">
+    <link rel="stylesheet" type="text/css" href="libs/prettyphoto-master/css/prettyPhoto.css">
+
+	<style>
+
+.mega_img {
+  max-width: 100%;
+  height: auto;
+}
+
+.a,
+.a:hover,
+.a.active {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+.a:hover {
+  color: #94da46;
+}
+.a:focus,
+.a.active {
+  color: #94da46;
+}
+
+.header .main-nav > .nav > li > .sub-menu {
+  left: 50%;
+  transform: translateY(50px) translateX(-50%);
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  .header .main-nav > .nav > li > .sub-menu {
+    width: 910px;
+  }
+}
+@media (min-width: 1201px) {
+  .header .main-nav > .nav > li > .sub-menu {
+    width: 1170px;
+  }
+}
+.header .main-nav > .nav > li:hover > .sub-menu {
+  transform: translateY(-1px) translateX(-50%);
+}
+.header .main-nav > .nav > li.menu-item.menu-blog > .sub-menu {
+  width: 300px;
+  transform: translateY(50px);
+  left: 0;
+}
+.header .main-nav > .nav > li.menu-item.menu-blog:hover > .sub-menu {
+  transform: translateY(-1px);
+}
+.header .header-bottom {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background-color: #1F2A37;
+}
+.header .main-nav {
+  text-align: left;
+  width: 100%;
+}
+.header .main-nav > ul.nav {
+  display: inline-block;
+  padding-left: 0;
+}
+.header .header-left nav {
+  display: inline-block;
+}
+.header .container-inner {
+  display: inline-block;
+  padding: 50px 0 0;
+  position: relative;
+  width: 100%;
+}
+.header .sub-menu {
+  background-color: #fff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  z-index: 9;
+}
+.header .sub-menu li {
+  display: inline-block;
+}
+.header .main-nav-wrapper {
+  position: relative;
+}
+.main-nav > .nav > li {
+  display: inline-block;
+  position: inherit;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.main-nav > .nav > li > .sub-menu {
+  border: none;
+  box-shadow: 1px 1px 3px 1px #ddd;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.05s ease 0s;
+  visibility: hidden;
+  padding: 40px 0;
+  left: 15px;
+  right: 15px;
+}
+.main-nav > .nav > li > .sub-menu > li {
+  border-left: 2px solid rgba(0, 0, 0, 0.09);
+  float: left;
+  position: relative;
+  width: 25%;
+  text-align: left;
+}
+.main-nav > .nav > li > .sub-menu > li:first-child {
+  border: none;
+}
+.main-nav > .nav > li:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-1px);
+  transition: all 0.5s ease 0.05s;
+}
+.sub-menu .sub-menu {
+  position: inherit;
+}
+.sub-menu .sub-menu li {
+  display: block;
+}
+div.sub-menu .sub-menu-mega {
+  padding: 0;
+  position: relative;
+}
+.sub-menu .desc-review-content section {
+  float: left;
+  width: 33.33%;
+}
+.nav.nav-pills li {
+  width: 100%;
+}
+.sub-menu .nav-pills {
+  float: left;
+  width: 25%;
+}
+.sub-menu .desc-review-content {
+  float: right;
+  width: 75%;
+}
+.sub-menu .desc-review-content section {
+  float: left;
+  width: 33.33%;
+}
+.main-nav > .nav > li.mega-menu .sub-menu-mega {
+  padding: 0;
+}
+.main-nav > .nav > li > .sub-menu > li > a,
+.main-nav > .nav > li.mega-menu .widget-title-wrapper .heading-title {
+  color: #333;
+  display: inline-block;
+  font-weight: 600;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  text-transform: uppercase;
+  padding-left: 20px;
+  font-size: 15px;
+}
+.main-nav > .nav > li > .sub-menu > li > a::before,
+.main-nav > .nav > li.mega-menu .widget-title-wrapper .heading-title::before {
+  background-color: #94da46;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 20px;
+  position: absolute;
+  width: 50px;
+}
+.main-nav > .nav > li > .sub-menu > li > a:hover,
+.main-nav > .nav > li.mega-menu .widget-title-wrapper .heading-title:hover {
+  color: #94da46;
+}
+.main-nav > .nav > li > .sub-menu > li > ul {
+  padding-bottom: 20px;
+}
+.main-nav > .nav > li > .sub-menu > li li {
+  padding: 10px 0 10px 20px;
+  position: relative;
+}
+.main-nav > .nav > li > .sub-menu > li li a {
+  color: #1F2A37;
+  width: 100%;
+}
+.main-nav > .nav > li > .sub-menu > li li:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  bottom: 50%;
+  left: 0;
+  width: 2px;
+  background-color: #94da46;
+  transition: all 0.5s ease 0s;
+}
+.main-nav > .nav > li > .sub-menu > li li:hover {
+  padding-left: 25px;
+  transition: all 0.5s ease 0s;
+}
+.main-nav > .nav > li > .sub-menu > li li:hover::before {
+  top: 3px;
+  bottom: 3px;
+  transition: all 0.3s ease 0s;
+}
+.main-nav > .nav > li > .sub-menu > li li:hover a {
+  color: #94da46;
+}
+.product-mega-menu-content {
+  display: inline-block;
+  float: right;
+}
+.product-mega-menu-content .rate {
+  display: block;
+}
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: #fff;
+}
+.nav > li > a {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: transparent;
+  color: #94da46;
+}
+.main-nav > .nav > li.menu-shop > .sub-menu > li {
+  width: 25%;
+}
+#primary-menu > .nav > li > a {
+  font-size: 16px;
+  margin-right: 10px;
+}
+#primary-menu > .nav > li > a::before {
+  content: "\f107";
+  font-family: FontAwesome;
+  font-weight: 100;
+  position: absolute;
+  right: 0;
+}
+.header-right .header-social-profile-wrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-right .header-social-profile-wrapper li {
+  display: inline-block;
+  margin: 0 2px;
+}
+.header-right .header-social-profile-wrapper li a {
+  color: #fff;
+  padding: 2px 8px;
+}
+.header-right .header-social-profile-wrapper li a:hover {
+  color: #94da46;
+}
+.canvas-menu-toggle-wrapper {
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+.my-wishlist {
+  margin-left: 40px;
+}
+.widget_shopping_cart_icon,
+.yolo-wishlist {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+}
+.widget_shopping_cart_icon:hover,
+.yolo-wishlist:hover {
+  background-color: transparent;
+}
+.yolo-canvas-menu-wrapper.in {
+  right: 0;
+  transition: all 0.5s ease 0s;
+  z-index: 22;
+}
+.yolo-canvas-menu-wrapper {
+  z-index: 6;
+  transition: all 0.5s ease 0s;
+  background-color: #1F2A37;
+  position: fixed;
+  right: -335px;
+  top: 0;
+  width: 330px;
+  padding: 20px;
+  height: 100vh;
+  z-index: 22;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ffffff;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner {
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
+  color: #ffffff;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside {
+  padding: 0;
+  border: none;
+  margin-bottom: 40px;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside:before {
+  top: 2px;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside h4 {
+  padding-left: 10px;
+  color: #ffffff;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside.widget_text:before {
+  background-color: transparent;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside.widget-social-profile:before {
+  background-color: transparent;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside.widget-social-profile a:hover i {
+  color: #94da46 !important;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside ul li.menu-item {
+  font-size: 12px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside ul li.menu-item a {
+  padding: 8px 4px;
+}
+.yolo-canvas-menu-wrapper .yolo-canvas-menu-inner aside ul li.menu-item a:hover {
+  padding-left: 15px;
+}
+.yolo-canvas-menu-wrapper .begreen-widget {
+  position: relative;
+  padding: 20px 10px;
+}
+.yolo-canvas-menu-wrapper .begreen-widget:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  height: 40px;
+  width: 40px;
+}
+.yolo-canvas-menu-wrapper .begreen-widget:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  height: 40px;
+  width: 40px;
+}
+.yolo-canvas-menu-wrapper .begreen-widget .name_author {
+  color: #94da46;
+}
+.yolo-canvas-menu-wrapper ul.social-profile {
+  font-size: 0;
+  list-style: outside none none;
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+}
+.yolo-canvas-menu-wrapper ul.social-profile li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.yolo-canvas-menu-wrapper ul.social-profile li a {
+  background-color: #f5f5f5;
+  border-radius: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  width: 36px;
+  display: inline-block;
+  transition: all 0.2s ease 0s;
+  padding: 0;
+}
+.yolo-canvas-menu-wrapper ul.social-profile li a i {
+  color: #777777;
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  transition: all 0.2s ease 0s;
+  vertical-align: middle;
+  width: 36px;
+}
+.header.menu-fixed {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: fixed;
+  box-shadow: 0 0 3px #eee;
+}
+.header.menu-fixed .header-right {
+  top: 5px;
+}
+.header.menu-fixed .main-nav > .nav > li,
+.header.menu-fixed .header-customize-item {
+  padding: 10px 0;
+}
+
+.header.menu-fixed.header-style-3 .header-bottom {
+  transform: none;
+  background-color: #94da46;
+}
+.header.menu-fixed.yolo-header-style-10 .header-right {
+  padding-top: 5px;
+}
+@-webkit-keyframes fixed {
+  0% {
+    transform: translateY(-102%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes fixed {
+  0% {
+    transform: translateY(-102%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes fixed {
+  0% {
+    transform: translateY(-102%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fixed {
+  0% {
+    transform: translateY(-102%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 992px) {
+  body .yolo-site .header .mobile-menu {
+    display: none;
+  }
+  nav .sub-menu {
+    top: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  nav#primary-menu,
+  body .header .header-bottom {
+    display: none;
+  }
+.yolo-header-style-8 {
+    position: relative;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-menu .header-right > div.search-button-wrapper {
+    display: none;
+  }
+}
+.main-nav > .nav > li.menu-item.menu-blog {
+  position: relative;
+}
+.main-nav > .nav > li.menu-item.menu-blog ul {
+  width: 300px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.main-nav > .nav > li.menu-item.menu-blog ul li {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  border-left: none;
+}
+.main-nav > .nav > li.menu-item.menu-blog ul li a {
+  text-transform: capitalize;
+  margin: 3px 0;
+  padding: 8px 15px;
+  transition: all 0.4s ease 0s;
+  color: #1F2A37;
+  font-weight: 400;
+}
+.main-nav > .nav > li.menu-item.menu-blog ul li a::before {
+  background-color: #94da46;
+  bottom: 50%;
+  height: auto;
+  left: 0;
+  top: 50%;
+  transition: all 0.4s ease 0s;
+  width: 2px;
+}
+.main-nav > .nav > li.menu-item.menu-blog ul li a:hover {
+  transition: all 0.4s ease 0s;
+  padding: 8px 15px 8px 20px;
+  color: #94da46;
+}
+.main-nav > .nav > li.menu-item.menu-blog ul li a:hover::before {
+  top: 0;
+  bottom: 0;
+  transition: all 0.4s ease 0s;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li {
+  display: block;
+  float: inherit;
+  width: 100%;
+  height: 55px;
+  border-left: none;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > a {
+  border-bottom: 1px solid #eee;
+  margin: 0;
+  padding: 0 10px;
+  height: 55px;
+  line-height: 55px;
+  width: 25%;
+  color: #1F2A37;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > a::before {
+  background-color: #94da46;
+  bottom: 50%;
+  content: "";
+  height: auto;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  transition: all 0.5s ease 0s;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 75%;
+  transform: translateY(50px);
+  transition: all 0.5s ease 0s;
+  padding: 0;
+  border-left: 1px solid #ddd;
+  z-index: -2;
+  padding: 0 20px;
+  height: 0;
+  background-color: #fff;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li {
+  width: 25%;
+  float: left;
+  padding: 20px 5px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li .tagcloud a {
+  border: 1px solid #eee;
+  color: #333;
+  display: inline-block;
+  float: left;
+  font-size: 15px;
+  margin: 3px;
+  padding: 6px 12px;
+  width: auto;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li .tagcloud a:hover {
+  background-color: #94da46;
+  border: 1px solid #94da46;
+  color: #fff;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li > a {
+  padding: 10px 0;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li::before {
+  display: none;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li ul {
+  padding: 0;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li:hover {
+  padding-left: 20px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li:last-child {
+  border: none;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li a {
+  display: inline-block;
+  float: left;
+  width: 40%;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li .mega-right {
+  display: inline-block;
+  float: left;
+  width: 60%;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li .mega-right > span {
+  color: #333;
+  display: inline-block;
+  width: 100%;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li .mega-right > span del > span {
+  color: #1F2A37;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li:before {
+  display: none;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li > ul > li li:before:hover {
+  padding-left: 20px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li:nth-child(2) > ul {
+  top: -55px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li:nth-child(3) > ul {
+  top: -110px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li:nth-child(4) > ul {
+  top: -165px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li:nth-child(5) > ul {
+  top: -220px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li.active-menu > ul {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease 0s;
+  z-index: 3;
+  height: auto;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li:hover > a,
+.main-nav .nav .mega-menu .sub-menu-mega > li.active-menu > a {
+  color: #94da46;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li:hover > a::before,
+.main-nav .nav .mega-menu .sub-menu-mega > li.active-menu > a::before {
+  top: 0;
+  bottom: 0;
+  transition: all 0.5s ease 0s;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li .infomation-mega {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li .infomation-mega span {
+  color: rgba(31, 42, 55, 0.7);
+  margin-right: 10px;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li .infomation-mega span i {
+  color: #94da46;
+  margin-right: 5px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li .infomation-mega span:last-child {
+  margin-right: 0;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li.sale-off-mega-menu > ul > li {
+  width: 33.33%;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li.sale-off-mega-menu > ul > li > a {
+  font-size: 18px;
+  margin: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+  text-align: left;
+  transition: all 0.35s ease 0s;
+  font-family: "Pacifico", sans-serif;
+  margin-bottom: 20px;
+}
+.main-nav .nav .mega-menu .sub-menu-mega > li.sale-off-mega-menu > ul > li > a::before {
+  background-color: #94da46;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 46px;
+}</style>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		 <div id="preloaderKDZ"></div>
+    <div class="yolo-site">
+      <div class="header yolo-header-style-2">
+
+        
+        
+        <div class="header-bottom">
+          <div class="container">
+
+            <div class="main-nav-wrapper">
+              <div class="header-left">
+                <nav id="primary-menu" class="main-nav">
+                  <ul class="nav">
+                                       <li class="mega-menu menu-item"><a class="a" href="#">MegaMenu</a>
+                      <ul class="sub-menu sub-menu-mega">
+                        <li class="sub-menu-mega-item"><a class="a" href="#">What we do</a>
+                          <ul>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-1.jpg" alt="mega"/></figure><a href="#" class="a" class="name-mega">Easy care houseplants</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-2.jpg" alt="mega"/></figure><a href="#" class="a" class="name-mega">Plaited Planter Tutorial Fall For DIY</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-3.jpg" alt="mega"/></figure><a class="a" href="#" class="name-mega">These Plant Pots Make From Upcycled Ceramic</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-4.jpg" alt="mega"/></figure><a class="a" href="#" class="name-mega">Plants Of The Month: Sanseivier</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="sub-menu-mega-item active-menu"><a class="a" href="#">Our latest work</a>
+                          <ul>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-1.jpg" alt="mega"/></figure><a class="a" href="#" class="name-mega">Easy care houseplants</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-2.jpg" alt="mega"/></figure><a class="a" href="#" class="name-mega">Plaited Planter Tutorial Fall For DIY</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-3.jpg" alt="mega"/></figure><a class="a" href="#" class="name-mega">These Plant Pots Make From Upcycled Ceramic</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                            <li>
+                              <figure><img class="mega_img" src="images/demo/mega-4.jpg" alt="mega"/></figure><a class="a" href="#" class="name-mega">Plants Of The Month: Sanseivier</a>
+                              <div class="infomation-mega"><span class="author">Admin</span><span class="time">July 2016</span><span class="comment"><i class="fa fa-comments-o"></i>0</span></div>
+                            </li>
+                          </ul>
+                        </li>
+                        
+                        <li class="sub-menu-mega-item sale-off-mega-menu"><a class="a" href="#">Sale OFF Products</a>
+                          <ul>
+                            <li><a class="a"  href="#">Featured Products</a>
+                              <ul>
+                                <li><a class="a" href="#"><img class="mega_img" src="images/demo/mega-5.jpg" alt="mg-" width="85" height="100"/></a>
+                                  <p class="mega-right"><span class="product-title">Hay Flowerpot With Saucer Huset</span><span class="price">$80.00–$100.00</span></p>
+                                </li>
+                                <li><a class="a" href="#"><img class="mega_img" src="images/demo/mega-6.jpg" alt="mg-" width="85" height="100"/></a>
+                                  <p class="mega-right"><span class="product-title">Cactus Shaped Eraser</span><span class="price">$32.00</span></p>
+                                </li>
+                              </ul>
+                            </li>
+                            <li><a class="a" href="#">Products</a>
+                              <ul>
+                                <li><a class="a" href="#"><img class="mega_img" src="images/demo/mega-7.jpg" alt="mg-" width="85" height="100"/></a>
+                                  <p class="mega-right"><span class="product-title">Hay Flowerpot With Saucer Huset</span><span class="price">$80.00–$100.00</span></p>
+                                </li>
+                                <li><a class="a" class="a" href="#"><img class="mega_img" src="images/demo/mega-5.jpg" alt="mg-" width="85" height="100"/></a>
+                                  <p class="mega-right"><span class="product-title">Unicorn Glitter Socks</span><span class="price">$40.00</span></p>
+                                </li>
+                              </ul>
+                            </li>
+                            <li><a class="a" href="#">Products Tags</a>
+                              <div class="tagcloud"><a class="a" href="#" class="tag-link tag-link-position-1">Beautiful</a><a class="a" href="#" class="tag-link tag-link-position-2">Cactus</a><a class="a" href="#" class="tag-link tag-link-position-3">Featured</a><a class="a" href="#" class="tag-link tag-link-position-4">Indoor</a><a class="a" href="#" class="tag-link tag-link-position-5">Outdoor</a><a class="a" href="#" class="tag-link tag-link-position-6">Tree</a></div>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+    <script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/animate/wow.min.js"></script>
+    <script type="text/javascript" src="libs/jquery.mmenu.all/jquery.mmenu.all.min.js"></script>
+    <script type="text/javascript" src="libs/prettyphoto-master/js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

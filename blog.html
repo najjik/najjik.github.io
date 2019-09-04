@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			   <script>$(document).ready(function(){
+  
+  $(".fa-search").click(function(){
+    $(".container, .input").toggleClass("active");
+    $("input[type='text']").focus();
+  });
+  
+});</script>
+	<script>$(document).ready(function(){
+ 
+    $("#back-top").hide();
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#back-top').fadeIn();
+            } else {
+                $('#back-top').fadeOut();
+            }
+        });
+ 
+        $('#back-top a').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+ 
+});
+
+</script>
+<script>
+$(function() {
+  function init() {
+    $('[data-behaviour="toggle-menu-icon"]').on('click', toggleMenuIcon);
+    $('[data-behaviour="toggle-link-icon"]').on('click', toggleSubMenu);
+  };
+  
+  function toggleMenuIcon() {
+    $(this).toggleClass('menu-icon--open');
+    $('[data-element="toggle-nav"]').toggleClass('nav--active');
+  };
+  
+  function toggleSubMenu() {
+    $(this).toggleClass('nav__link--plus nav__link--minus');
+    $('[data-behaviour="toggle-sub-menu"]').slideToggle('nav__sub-list--active');
+  };
+  
+  init()
+});
+	</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="slick/slick.css"/>
+    <link rel="stylesheet" href="slick/slick-theme.css"/>
+    <script src="js/js.js"></script>
+	<meta charset="utf-8">
+	<title>lol</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/lalka.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/responsiveslides.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='./images/zatraleno.png' rel='icon' type='image/x-icon'/>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/<font-></font->awesome.min.css" rel="stylesheet" integrity="<sha384-></sha384->wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 	crossorigin="anonymous">
+
+</head>
+<body>
+		<p id="back-top">
+    <a href="#top"><img src="images/naverch2.png"></a>
+</p>
+<!--------------верх--------------->
+<header>
+	<div class="wrap-header lalka">
+		<div id="logo"><a href="index.html"><img id="logo" src="./images/govnocomp%20technologies.png" width="350px" height="50px" alt="logo"></a></div>
+
+
+	</div>
+</header>
+
+<ul class="menu-main">
+	<li><a href="index.html">Главная</a></li>
+	<li><a href="blog.html">новости и статьи</a></li>
+	<li><a href="services.html">о магазине</a></li>
+	<li><a href="single.html">доставка и оплата</a></li>
+	<li><a href="contact.html">контакты</a></li>
+</ul>
+
+<div class="full_catalog_container">
+	<div class="wrap-featured_catalog lalka">	<div class="four"><ul class="topmenu"><div class="full_catalog"><li>КАТЕГОРИИ     <i class="d_a fa fa-angle-down"></i>
+      <ul class="submenu_2">
+			<li><a href="#"></a>Комплектующие для компьютеров </li>
+			<li><a href="#"></a>Ноутбуки</li>
+			<li><a href="#"></a>Планшеты</li>
+			<li><a href="#"></a>Телефоны</li>
+			<li><a href="#"></a>Периферия</li>
+			<li><a href="#"></a>Игровые консоли</li>
+			<li><a href="#"></a>телевизоры</li>
+			<li><a href="#"></a>смэрть</li>
+		</ul>
+	</div><div class="input-wrapper" data-text="">
+  <input class="input_search" type="text" placeholder="Поиск…">          
+</div>
+	<script>
+const wrapper = document.querySelector(".input-wrapper"),
+      textInput = document.querySelector("input[type='text']");
+        
+textInput.addEventListener("keyup", event => {
+  wrapper.setAttribute("data-text", event.target.value);
+});
+</script>
+		<div class="basket">КОРЗИНА: 0 <img src="images/shopping-cart-of-checkered-design%20(3).png"></div>
+		</div></div></div>
+       <div class="catalog_container">
+<div class="nav__container">
+  <div class="menu_container">
+  <div class="header">
+    <div class="menu-icon" data-behaviour="toggle-menu-icon">
+		<span class="menu-icon__bar"></span>
+    </div>
+  </div>
+  <nav class="nav" data-element="toggle-nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="index.html">Главная</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="blog.html">новости и статьи</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="services.html">о магазине</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="single.html">доставка и оплата</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="contact.html">контакты</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+</div>
+  
+	  <div class="catalog">Категории  &#9660
+</div></div>
+<div class="search"><div class="mini-wrapper">
+  <div class="mini-container">
+    <input type="text" class="mini-input" placeholder="Поиск...">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </div>
+</div></div>
+		   <script>$(document).ready(function(){
+  
+  $(".fa-search").click(function(){
+    $(".container, .input").toggleClass("active");
+    $("input[type='text']").focus();
+  });
+  
+});</script>
+<!--------------основное--------------->
+<section id="content">
+	<div class="wrap-content lalka">
+		<div class="row block">
+			<div id="main-content" class="col-2-3">
+				<div class="wrap-col">
+					<article>
+						<h2><a href="#">Геймерский ноутбук MSI GP62M 7REX Leopard Prot</a></h2>
+						<img src="images/msi_nout.png"/ >
+						<p>Тайваньский производитель MSI представил мощного конкурента всем игровым ноутбукам — модель MSI GP62M 7REX. Первое, что бросается в глаза — яркий дизайн корпуса, скрывающего в себе мощное «железо». При включении вы оцените приятную разноцветную клавиатуру, прямые линии и дружественный интерфейс.…</p>
+						<div class="more"><a class="comments" href="#">02 комментария</a><a class="button" href="#">Смотреть дальше</a></div>
+					</article>
+					<article>
+						<h2><a href="#">Обновленный Notebook 9 от Samsung готовится к выходу</a></h2>
+						<img src="images/samsung_nout.png"/>
+						<p>В этом году было представлено несколько весьма интересных компьютеров, от ноутбуков в рюкзаке для погружения в виртуальную реальность до Lenovo Yoga Book. Однако, некоторым пользователям нужен простой портативный ноутбук, не перегруженный новомодными штучками. Таким девайсом для них сможет стать Samsung…</p>
+						<div class="more"><a class="comments" href="#">01 комментарий</a><a class="button" href="#">Смотреть дальше</a></div>
+					</article>
+					<article>
+						<h2><a href="#">Razer объединяется с Maingear для создания игрового PC твоей мечты</a></h2>
+						<img src="images/raizer_komp.png"/>
+						<p>За последние несколько недель специалисты в области игровых компьютеров из Razer были очень заняты. Они представляли целую прорву разных игровых устройств, среди которых была клавиатура для iPad, обновленный игровой ноутбук Blade и аксессуары: мыши, наушники и камеры. Выставка IFA 2016…</p>
+						<div class="more"><a class="comments" href="#">10 комментариев</a><a class="button" href="#">Смотреть дальше</a></div>
+					</article>
+					<article>
+						<h2><a href="#">NVIDIA представила новые игровые видеокарты
+                        </a></h2>
+						<img src="images/rtx.png"/>
+						<p>Компания NVIDIA на конференции Gamescom 2018 представила новое поколение игровых видеокарт — GeForce RTX 2070, RTX 2080 и RTX 2080 Ti.
+                        Флагманская модель в линейке — GeForce RTX 2080 Ti. Новинка получила 11 ГБ памяти типа GDDR6 и 352-битную шину — вместе это позволяет говорить о пропускной способности...
+                        </p>
+						<div class="more"><a class="comments" href="#">23 комментария</a><a class="button" href="#">Смотреть дальше</a></div>
+					</article>
+					
+					<ul id="pagi">
+                        <li><a href="#">назад</a></li>
+						<li><a class="current" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">вперёд</a></li>
+					</ul>
+					
+				</div>
+			</div>
+			<div id="sidebar" class="col-1-3">
+				<div class="wrap-col">
+					<div class="box">
+						<div class="heading"><h2>About us</h2></div>
+						<div class="content">
+							<img src="images/about.jpg" />
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor...</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="heading"><h2>Категории</h2></div>
+						<div class="content">
+							<ul>
+								<li><a href="#">Ноутбуки</a></li>
+								<li><a href="#">Периферия</a></li>
+								<li><a href="#">Мониторы</a></li>
+								<li><a href="#">Компьютеры</a></li>
+								<li><a href="#">Компьютерные игры</a></li>
+								<li><a href="#">Мобильные устройства</a></li>
+								<li><a href="#">Мобильные игры</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="box">
+						<div class="heading"><h2>Популярное</h2></div>
+						<div class="content">
+							<div class="post">
+								<img src="images/msi_nout_small.png"/>
+								<h4><a href="#">Геймерский ноутбук MSI GP62M 7REX Leopard Prot</a></h4>
+								<p>Декабрь 12 ,2018</p>
+							</div>
+							<div class="post">
+								<img src="images/rtx_small.png"/>
+								<h4><a href="#">NVIDIA представила новые видеокарты</a></h4>
+								<p>Сентябрь 28 ,2018</p>
+							</div>
+							<div class="post">
+								<img src="images/samsung_nout_small.png"/>
+								<h4><a href="#">Обновленный Notebook 9 от Samsung готовится к выходу</a></h4>
+								<p>Август 09 ,2018</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--------------низ--------------->
+<footer>
+	<div class="wrap-footer">
+		<div class="wrapper">
+  <ul>
+    <li class="facebook"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
+    <li class="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+    <li class="instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+    <li class="google"><i class="fa fa-google fa-2x" aria-hidden="true"></i></li>
+    <li class="whatsapp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></li>
+  </ul>
+</div>
+		<div class="copyright">
+		<p>Copyright © 2012 - Designed by lalka</p>
+		</div>
+	</div>
+</footer>
+
+</body></html>
