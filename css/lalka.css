@@ -1,0 +1,57 @@
+
+.lalka{ width: 960px; position: relative; margin: 0 auto; padding: 0px;}
+.lalka:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+.lalka .row{}
+.lalka .row:before,.row:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.lalka .row:after{clear: both; }
+.lalka .row{zoom: 1;}
+
+.lalka .wrap-col{margin:10px;}
+
+.lalka .col-1-2, .lalka .col-1-3, .lalka .col-2-3, .lalka .col-1-4, .lalka .col-2-4, .lalka .col-3-4, .lalka .col-1-5, .lalka .col-2-5, .lalka .col-3-5, .lalka .col-4-5, .lalka .col-1-6, .lalka .col-2-6, .lalka .col-3-6, .lalka .col-4-6, .lalka .col-5-6{float:left; display: inline-block;}
+
+.lalka .col-full{width:100%;}
+
+.lalka .col-1-2{width:50%;}
+
+.lalka .col-1-3{width:33.33%;}
+.lalka .col-2-3{width:66.66%;}
+
+.lalka .col-1-4{width:25%;}
+.lalka .col-2-4{width:50%;}
+.lalka .col-3-4{width:75%;}
+
+.lalka .col-1-5{width:20%;}
+.lalka .col-2-5{width:40%;}
+.lalka .col-3-5{width:60%;}
+.lalka .col-4-5{width:80%;}
+
+.lalka .col-1-6{width:16.66%;}
+.lalka .col-2-6{width:33.33%;}
+.lalka .col-3-6{width:50%;}
+.lalka .col-4-6{width:66.66%;}
+.lalka .col-5-6{width:83.33%;}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.lalka{width:768px;}
+}
+
+@media only screen and (max-width: 767px) {
+	.lalka{width:100%;}
+}
+
+@media only screen and (min-width: 620px) and (max-width: 767px) {
+	.lalka{width:100%;}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 619px) {
+	.lalka{width:100%;}
+	.lalka .col-1-3, .lalka .col-2-3{width:100%;}
+	.lalka .col-1-4{width:50%;}
+	.lalka .col-1-6, .lalka .col-2-6, .lalka .col-3-6, .lalka .col-4-6, .lalka .col-5-6{width:100%;}
+}
+
+@media only screen and (max-width: 479px) {
+	.lalka, .lalka .col-1-2, .lalka .col-1-3, .lalka .col-2-3, .lalka .col-1-4, .lalka .col-2-4, .lalka .col-3-4, .lalka .col-1-5, .lalka .col-2-5, .lalka .col-3-5, .lalka .col-4-5, .lalka .col-1-6, .lalka .col-2-6, .lalka .col-3-6, .lalka .col-4-6, .lalka .col-5-6{width:100%;}
+}
