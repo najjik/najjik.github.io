@@ -1,0 +1,126 @@
+html{overflow-x: hidden}
+.video embed,
+.video object,
+.video iframe {
+   width: 100%;
+   height: auto;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	/* -------------------------------------------- */
+	/* ------------------Header-------------------- */
+	header #logo{top:10px; left:0px; height: 90%; width: 70%; right:-2%; float:none}
+	/* -------------------------------------------- */
+	/* ------------------Content------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Footer-------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Other----------------*---- */
+	
+}
+
+@media only screen and (max-width: 767px) {
+	/* -------------------------------------------- */
+	/* ------------------Header-------------------- */
+	header {margin-top: 0px;height:150px;}
+			.input-wrapper {float:none; width:100%}
+	input{float:none; width:100%}
+	header #logo{top:10px; left:0px; height: 90%; width: 90%; right:-2%; float:none}
+	/* -------------------------------------------- */
+	/* ------------------Featured------------------ */
+	
+	/* -------------------------------------------- */
+	/* ------------------Content------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Footer-------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Other----------------*---- */
+}
+
+@media only screen and (min-width: 620px) and (max-width: 767px) {
+		.input-wrapper {float:none; width:100%}
+	input{float:none; width:100%}
+	.input-wrapper {max-width: 300px}
+	/* -------------------------------------------- */
+	/* ------------------Header-------------------- */
+	header #logo{top:10px; height: 90%; width: 75%; left:0%; float:none}
+	/* -------------------------------------------- */
+	/* ------------------Content------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Footer-------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Other----------------*---- */
+}
+
+@media only screen and (min-width: 480px) and (max-width: 619px) {
+	/* -------------------------------------------- */
+	/* ------------------Header-------------------- */
+	header #logo{top:10px; height: 90%; width: 75%; right:0%; float:none}
+		.block01{padding: 5px}
+	.block01 h2{font-size: 24px}
+	.block01 p{font-size: 18px;
+		display: inline-block;}
+	.catalog{max-width: 619px}
+	.block02 p{font-size:18px}
+.block02 .box1{height: auto}
+.block02 .box2{height: auto}
+.block02 .box3{height: auto}
+	.full_catalog_container{height:100px}
+	.full_catalog{width:100%;
+	margin: 0px 0px 5px 0px}
+	/* -------------------------------------------- */
+	/* ------------------Content------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Footer-------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Other----------------*---- */
+}
+
+@media only screen and (max-width: 479px) {
+	/* -------------------------------------------- */
+	/* ------------------Header-------------------- */
+	header{height: 170px;}
+	header #logo{display: block; margin:auto; top:10px; height: 100%; width: 98%; right:0.2%;}
+	header .button-search{ right:1%}
+	
+	.block01{padding: 5px}
+	.block01 h2{font-size: 24px}
+	.block01 p{font-size: 18px}
+	.full_catalog{display:none}
+	.full_catalog_container{display:none}
+	.block02 p{font-size:18px}
+.block02 .box1{height: auto}
+.block02 .box2{height: auto}
+.block02 .box3{height: auto}
+.search{
+	display: inline-block;}
+	.menu-main{display:none;}
+	.catalog_container{
+	display: inline-block;}
+	
+	.input-wrapper {display: none;}
+	input{display: none;}
+	
+	nav .wrap-nav{background: none; border: none;}
+	p{font-size: 12px}
+	
+	#main-content .comment input, #main-content .comment textarea{width:90%;}
+	/* -------------------------------------------- */
+	/* ------------------Content------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Footer-------------------- */
+	
+	/* -------------------------------------------- */
+	/* ------------------Other----------------*---- */
+}
+
